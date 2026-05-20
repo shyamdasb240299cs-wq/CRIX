@@ -1,0 +1,86 @@
+name: wallet_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  fl_chart: any
+
+  # 🔥 Firebase dependencies
+  firebase_core: ^2.32.0
+  firebase_auth: ^4.20.0
+  cloud_firestore: ^4.17.5
+  google_sign_in: ^6.2.1
+  intl: ^0.20.2
+
+  # 🪙 Local storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # 🎬 Animation
+  lottie: ^3.3.2
+
+  # 🌅 Splash screen
+  flutter_native_splash: ^2.4.7
+  audioplayers: ^6.6.0
+  shared_preferences: ^2.5.5
+  google_generative_ai: ^0.4.7
+  flutter_dotenv: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.6
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Qarume
+      fonts:
+        - asset: assets/fonts/Crix.ttf
+    - family: Pixel
+      fonts:
+        - asset: assets/fonts/Pixel.ttf
+
+  assets:
+    - .env
+    - assets/app_icon.png
+    - assets/animations/coins_drop.json
+    - assets/animations/Crixy.json
+    - assets/animations/Crixy_Hello.json
+    - assets/transparent.png
+    - assets/voice/transition.wav
+    - assets/voice/Crixy.mp3
+    - assets/voice/Crixy_intro.mp3
+
+flutter_native_splash:
+  color: "#0F0F0F"
+  image: assets/transparent.png
+  android: true
+  ios: true
+
+  android_12:
+    color: "#0F0F0F"
+    icon_background_color: "#0F0F0F"
+    image: assets/transparent.png
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/app_icon.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+  adaptive_icon_background: "#ffffff00"
+  adaptive_icon_foreground: "assets/app_icon.png"
